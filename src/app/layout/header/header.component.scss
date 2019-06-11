@@ -1,0 +1,40 @@
+.dropdown.show button::after {
+    transform:rotate(180deg);
+  }
+
+#id{
+    width: 121px;
+    height: 17px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    /* Text style for "Hello," */
+    font-family: "Open Sans";
+    font-weight: 400;
+}
+.nav-item{
+    height: 17px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.navbar{
+    height: 80px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    background-color: #016272;
+}
+
+a { color: #ffffff; }
+
+.div{
+    display:flex;
+}
+.img{
+    height: 5px; width: 5px;
+}
