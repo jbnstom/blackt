@@ -7,10 +7,10 @@ const routes: Routes = [
   //   pathMatch: 'full',
   //   loadChildren: './datasets/datasets/datasets.component#DatasetsModule'
   // }
-  {
-   path: '',
-   loadChildren: () => import('./datasets/datasets.module').then(mod => mod.DatasetsModule)
- }
+//   {
+//    path: '',
+//    loadChildren: () => import('./datasets/datasets.module').then(mod => mod.DatasetsModule)
+//  }
 
 
 ];
