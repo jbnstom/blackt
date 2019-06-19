@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datasets.component.scss']
 })
 export class DatasetsComponent implements OnInit {
-
-  constructor() { }
+  changeImage: boolean;
+  cardhover: boolean;
+  constructor() { this.changeImage = false;
+                  this.cardhover = false;
+  }
 
   ngOnInit() {
   }

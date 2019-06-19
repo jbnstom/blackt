@@ -7,28 +7,32 @@
     <div class="row content">
       <div class="col-sm-3 sidenav">
         <div class="card" id="bigc">
-            <div class="card-body" style="padding: 0px;">
-              <img  class="card-img-top" src="../../../assets/images/dsets.png">
+            <div class="card-body" style="padding: 0px; width: 100%;" (mouseover)="changeImage=true" (mouseout)="changeImage=false" ng-init="changeImage=false">
+                <img *ngIf="!changeImage" src="../../../assets/images/dsets.png">
+                <img *ngIf="changeImage" src="../../../assets/images/datasetshov.png">
             </div>
         </div> 
       </div>
       
       <div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+         
           <h4><strong>Popular</strong></h4>
+         
+
           <div class="row">
               <div id="demo" class="carousel slide" data-ride="carousel">
-
-                  <!-- Indicators -->
-                  <ul class="carousel-indicators">
-                    <li data-target="#demo" data-slide-to="0" class="active"></li>
-                    <li data-target="#demo" data-slide-to="1"></li>
-                    <li data-target="#demo" data-slide-to="2"></li>
-                  </ul>
-
+             <div class="Indicators" style="float: right;">
+                <!-- Indicators -->
+              <ul class="carousel-indicators" >
+                  <li data-target="#demo" data-slide-to="0" class="firstactive"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+             </div>                 
         <div class="carousel-inner no-padding">
           <div class="carousel-item active">
             <div class="row">
-            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="margin: 5px;background-color: #ffffff;border-left-color: #016272; border-left-style: solid;border-left-width:9px">
+            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="margin: 5px;background-color: #ffffff;border-left-color: #016272; border-left-style: solid;border-left-width:9px" id="smallc">
                 <div class="card-header">
                   <div  style="float:right;">
                       <img src="../../../assets/images/view.png"> 132 &nbsp;
@@ -44,7 +48,7 @@
                 </div>
 
             </div> 
-            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="border-left-color: #02a9e0; border-left-style: solid; border-left-width:9px; margin: 5px;background-color: #ffffff;">
+            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="border-left-color: #02a9e0; border-left-style: solid; border-left-width:9px; margin: 5px;background-color: #ffffff;" id="smallc">
                 <div class="card-header">
                     <div  style="float:right;">
                         <img src="../../../assets/images/view.png"> 132  &nbsp;
@@ -59,7 +63,7 @@
                   <p class="card-text"><strong> and make up the bulk of the card's content.</strong></p>
                 </div>
             </div> 
-            <div class="card rounded-0 col-lg-3 col-md-5 col-sm-5" style="margin: 5px; border-left-color: #e5bc49; border-left-style: solid;border-left-width:9px; background-color: #ffffff;">
+            <div class="card rounded-0 col-lg-3 col-md-5 col-sm-5" style="margin: 5px; border-left-color: #e5bc49; border-left-style: solid;border-left-width:9px; background-color: #ffffff;" id="smallc">
                 <div class="card-header">
                     <div  style="float:right;">
                         <img src="../../../assets/images/view.png"> 132 &nbsp;
@@ -77,7 +81,7 @@
           </div>
          <div class="carousel-item">
            <div class="row">
-            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="border-left-color: #02a9e0; border-left-style: solid; border-left-width:9px; margin: 5px;background-color: #ffffff;">
+            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="border-left-color: #02a9e0; border-left-style: solid; border-left-width:9px; margin: 5px;background-color: #ffffff;" id="smallc">
                 <div class="card-header">
                     <div  style="float:right;">
                         <img src="../../../assets/images/view.png"> 132  &nbsp;
@@ -92,7 +96,23 @@
                   <p class="card-text"><strong> and make up the bulk of the card's content.</strong></p>
                 </div>
             </div> 
-            <div class="card rounded-0 col-lg-3 col-md-5 col-sm-5" style="margin: 5px; border-left-color: #e5bc49; border-left-style: solid;border-left-width:9px; background-color: #ffffff;">
+            <div class="card rounded-0 col-lg-4 col-md-5  col-sm-5" style="margin: 5px;background-color: #ffffff;border-left-color: #016272; border-left-style: solid;border-left-width:9px" id="smallc">
+                <div class="card-header">
+                  <div  style="float:right;">
+                      <img src="../../../assets/images/view.png"> 132 &nbsp;
+                    <img src="../../../assets/images/like.png">&nbsp;
+                    
+                  </div>
+                  
+                  <br>
+                  <img src="../../../assets/images/file.png">
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><strong>Some quick example text to build on the card title </strong></p>
+                </div>
+
+            </div> 
+            <div class="card rounded-0 col-lg-3 col-md-5 col-sm-5" style="margin: 5px; border-left-color: #e5bc49; border-left-style: solid;border-left-width:9px; background-color: #ffffff;" id="smallc">
                 <div class="card-header">
                     <div  style="float:right;">
                         <img src="../../../assets/images/view.png"> 132 &nbsp;
@@ -108,13 +128,15 @@
             </div> 
          </div>   
          </div>
-</div>
-</div>
+        </div>
+      </div>
 <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+    <!-- <span class="carousel-control-prev-icon"></span> -->
+    <img src="../../../assets/images/lefticon.png">
   </a>
   <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
+    <!-- <span class="carousel-control-next-icon"></span> -->
+    <img src="../../../assets/images/righticon.png">
   </a>
 </div>
           </div>       
